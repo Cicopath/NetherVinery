@@ -7,13 +7,19 @@ architectury {
     fabric()
 }
 
+def jarFileName = 'letsdo-nethervinery-fabric'
+
+archivesBaseName = jarFileName
+
+
+
 loom {
     accessWidenerPath = project(":common").loom.accessWidenerPath
 }
 
 configurations {
     common
-    shadowCommon // Don't use shadow from the shadow plugin since it *excludes* files.
+    shadowCommon
     compileClasspath.extendsFrom common
     runtimeClasspath.extendsFrom common
     developmentFabric.extendsFrom common
@@ -85,8 +91,6 @@ publishing {
         }
     }
 
-    // See https://docs.gradle.org/current/userguide/publishing_maven.html for information on how to set up publishing.
     repositories {
-        // Add repositories to publish to here.
     }
 }

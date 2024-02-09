@@ -28,7 +28,6 @@ import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import org.jetbrains.annotations.Nullable;
 import satisfyu.nethervinery.block.entity.AgingBarrelBlockEntity;
-import satisfyu.vinery.util.VineryUtils;
 
 import java.util.HashMap;
 import java.util.List;
@@ -51,7 +50,7 @@ public class AgingBarrelBlock extends HorizontalDirectionalBlock implements Enti
 
     public static final Map<Direction, VoxelShape> SHAPE = Util.make(new HashMap<>(), map -> {
         for (Direction direction : Direction.Plane.HORIZONTAL.stream().toList()) {
-            map.put(direction, VineryUtils.rotateShape(Direction.NORTH, direction, voxelShapeSupplier.get()));
+            map.put(direction, satisfyu.vinery.util.Util.rotateShape(Direction.NORTH, direction, voxelShapeSupplier.get()));
         }
     });
 

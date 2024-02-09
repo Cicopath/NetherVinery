@@ -14,7 +14,7 @@ import java.util.function.Supplier;
 
 public class NetherBlockEntityTypes {
 
-    private static final Registrar<BlockEntityType<?>> BLOCK_ENTITY_TYPES = DeferredRegister.create(Vinery.MODID, Registries.BLOCK_ENTITY_TYPE).getRegistrar();
+    private static final Registrar<BlockEntityType<?>> BLOCK_ENTITY_TYPES = DeferredRegister.create(Vinery.MOD_ID, Registries.BLOCK_ENTITY_TYPE).getRegistrar();
 
     public static final RegistrySupplier<BlockEntityType<ApplePressBlockEntity>> APPLE_PRESS_BLOCK_ENTITY = create("crimson_apple_press", () -> BlockEntityType.Builder.of(ApplePressBlockEntity::new, NetherObjectRegistry.WARPED_APPLE_PRESS.get(), NetherObjectRegistry.CRIMSON_APPLE_PRESS.get()).build(null));
     public static final RegistrySupplier<BlockEntityType<AgingBarrelBlockEntity>> AGING_BARREL_ENTITY = create("aging_barrel", () -> BlockEntityType.Builder.of(AgingBarrelBlockEntity::new, NetherObjectRegistry.WARPED_FERMENTATION_BARREL.get(), NetherObjectRegistry.CRIMSON_FERMENTATION_BARREL.get()).build(null));

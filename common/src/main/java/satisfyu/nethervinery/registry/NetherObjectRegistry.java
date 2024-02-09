@@ -34,8 +34,8 @@ import satisfyu.vinery.block.storage.WineBottleBlock;
 import satisfyu.vinery.item.DrinkBlockBigItem;
 import satisfyu.vinery.item.DrinkBlockSmallItem;
 import satisfyu.vinery.item.GrapeBushSeedItem;
-import satisfyu.vinery.registry.VineryEffects;
-import satisfyu.vinery.util.VineryFoodComponent;
+import satisfyu.vinery.registry.MobEffectRegistry;
+import satisfyu.vinery.util.FoodComponent;
 
 import java.util.List;
 import java.util.function.Consumer;
@@ -63,11 +63,11 @@ public class NetherObjectRegistry {
     public static final RegistrySupplier<Item> WARPED_GRAPEJUICE = registerI("warped_grapejuice", () -> new Item(getSettings()));
     public static final RegistrySupplier<Item> CRIMSON_GRAPEJUICE = registerI("crimson_grapejuice", () -> new Item(getSettings()));
     public static final RegistrySupplier<Block> GHASTLY_GRENACHE = registerB("ghastly_grenache", () -> new WineBottleBlock(getWineSettings(), 2));
-    public static final RegistrySupplier<Item>  GHASTLY_GRENACHE_ITEM = registerI("ghastly_grenache", () -> new DrinkBlockBigItem(GHASTLY_GRENACHE.get(), getWineItemSettings(VineryEffects.IMPROVED_JUMP_BOOST.get(), 1200)));
+    public static final RegistrySupplier<Item>  GHASTLY_GRENACHE_ITEM = registerI("ghastly_grenache", () -> new DrinkBlockBigItem(GHASTLY_GRENACHE.get(), getWineItemSettings(MobEffectRegistry.IMPROVED_JUMP_BOOST.get(), 1200)));
     public static final RegistrySupplier<Block> NETHERITE_NECTAR = registerB("netherite_nectar", () -> new WineBottleBlock(getWineSettings(), 3));
     public static final RegistrySupplier<Item>  NETHERITE_NECTAR_ITEM = registerI("netherite_nectar", () -> new DrinkBlockSmallItem(NETHERITE_NECTAR.get(), getWineItemSettings(NetherEffects.NETHERITE.get(), 2400)));
     public static final RegistrySupplier<Block> BLAZEWINE_PINOT = registerB("blazewine_pinot", () -> new WineBottleBlock(getWineSettings(), 1));
-    public static final RegistrySupplier<Item>  BLAZEWINE_PINOT_ITEM = registerI("blazewine_pinot", () -> new DrinkBlockBigItem(BLAZEWINE_PINOT.get(), getWineItemSettings(VineryEffects.IMPROVED_FIRE_RESISTANCE.get(), 1200)));
+    public static final RegistrySupplier<Item>  BLAZEWINE_PINOT_ITEM = registerI("blazewine_pinot", () -> new DrinkBlockBigItem(BLAZEWINE_PINOT.get(), getWineItemSettings(MobEffectRegistry.LAVA_WALKER.get(), 1200)));
     public static final RegistrySupplier<Block> NETHER_FIZZ = registerB("nether_fizz", () -> new WineBottleBlock(getWineSettings(), 2));
     public static final RegistrySupplier<Item>  NETHER_FIZZ_ITEM = registerI("nether_fizz", () -> new DrinkBlockSmallItem(NETHER_FIZZ.get(), getWineItemSettings(NetherEffects.HEARTHSTONE.get(), 1)));
     public static final RegistrySupplier<Block> LAVA_FIZZ = registerB("lava_fizz", () -> new WineBottleBlock(getWineSettings(), 3));
@@ -130,7 +130,7 @@ public class NetherObjectRegistry {
     private static FoodProperties wineFoodComponent(MobEffect effect, int duration) {
         List<Pair<MobEffectInstance, Float>> effects = Lists.newArrayList();
         if (effect != null) effects.add(Pair.of(new MobEffectInstance(effect, duration), 1.0f));
-        return new VineryFoodComponent(effects);
+        return new FoodComponent(effects);
     }
 
     private static BlockBehaviour.Properties getBushSettings() {

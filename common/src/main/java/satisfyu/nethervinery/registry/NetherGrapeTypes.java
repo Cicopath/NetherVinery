@@ -1,13 +1,13 @@
 package satisfyu.nethervinery.registry;
 
 import satisfyu.vinery.block.grape.GrapeType;
-import satisfyu.vinery.registry.GrapeTypes;
+import satisfyu.vinery.registry.GrapeTypeRegistry;
 
 
 public class NetherGrapeTypes {
 
-    public static final GrapeType CRIMSON = GrapeTypes.registerGrapeType("crimson");
-    public static final GrapeType WARPED = GrapeTypes.registerGrapeType("warped");
+    public static final GrapeType CRIMSON = GrapeTypeRegistry.registerGrapeType("crimson");
+    public static final GrapeType WARPED = GrapeTypeRegistry.registerGrapeType("warped");
 
     public static void register() {
     }

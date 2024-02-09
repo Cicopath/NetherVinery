@@ -24,7 +24,7 @@ import org.jetbrains.annotations.Nullable;
 import satisfyu.nethervinery.registry.NetherBlockEntityTypes;
 import satisfyu.vinery.client.gui.handler.FermentationBarrelGuiHandler;
 import satisfyu.vinery.registry.ObjectRegistry;
-import satisfyu.vinery.registry.VineryRecipeTypes;
+import satisfyu.vinery.registry.RecipeTypesRegistry;
 import satisfyu.vinery.util.WineYears;
 
 public class AgingBarrelBlockEntity extends BlockEntity implements ImplementedInventory, BlockEntityTicker<AgingBarrelBlockEntity>, MenuProvider {
@@ -91,7 +91,7 @@ public class AgingBarrelBlockEntity extends BlockEntity implements ImplementedIn
     public void tick(Level world, BlockPos pos, BlockState state, AgingBarrelBlockEntity blockEntity) {
         if (world.isClientSide) return;
         boolean dirty = false;
-        Recipe<?> recipe = world.getRecipeManager().getRecipeFor(VineryRecipeTypes.FERMENTATION_BARREL_RECIPE_TYPE.get(), this, world).orElse(null);
+        Recipe<?> recipe = world.getRecipeManager().getRecipeFor(RecipeTypesRegistry.FERMENTATION_BARREL_RECIPE_TYPE.get(), this, world).orElse(null);
         RegistryAccess access = level.registryAccess();
         if (canCraft(recipe, access)) {
             this.fermentationTime++;

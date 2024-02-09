@@ -17,7 +17,7 @@ import satisfyu.vinery.client.gui.handler.slot.StoveOutputSlot;
 import satisfyu.vinery.client.recipebook.group.FermentationBarrelRecipeBookGroup;
 import satisfyu.vinery.recipe.FermentationBarrelRecipe;
 import satisfyu.vinery.registry.ObjectRegistry;
-import satisfyu.vinery.registry.VineryRecipeTypes;
+import satisfyu.vinery.registry.RecipeTypesRegistry;
 
 
 import java.util.List;
@@ -58,7 +58,7 @@ public class AgingBarrelGuiHandler extends AbstractRecipeBookGUIScreenHandler {
     }
 
     private boolean isIngredient(ItemStack stack) {
-        return this.world.getRecipeManager().getAllRecipesFor(VineryRecipeTypes.FERMENTATION_BARREL_RECIPE_TYPE.get()).stream().anyMatch(recipe -> recipe.getIngredients().stream().anyMatch(x -> x.test(stack)));
+        return this.world.getRecipeManager().getAllRecipesFor(RecipeTypesRegistry.FERMENTATION_BARREL_RECIPE_TYPE.get()).stream().anyMatch(recipe -> recipe.getIngredients().stream().anyMatch(x -> x.test(stack)));
     }
 
     public int getScaledProgress(int arrowWidth) {

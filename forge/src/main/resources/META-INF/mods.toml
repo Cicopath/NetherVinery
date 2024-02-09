@@ -8,6 +8,7 @@ modId = "nethervinery"
 version = "${version}"
 displayName = "Nether Vinery"
 authors = "satisfyu"
+icon = "pack.png"
 description = '''
 Welcome to Nether Vinery! New grapes, new decor - all in the style of the Nether.
 '''
@@ -37,13 +38,13 @@ side = "BOTH"
 [[dependencies.nethervinery]]
 modId = "vinery"
 mandatory = true
-versionRange = "[1.4.6,)"
+versionRange = "[1.4.8,)"
 ordering = "AFTER"
 side = "BOTH"
 
 [[dependencies.nethervinery]]
 modId = "doapi"
 mandatory = true
-versionRange = "[1.2.7,)"
+versionRange = "[1.2.8,)"
 ordering = "AFTER"
 side = "BOTH"

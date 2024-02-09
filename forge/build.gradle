@@ -1,11 +1,17 @@
 plugins {
-    id "com.github.johnrengelman.shadow" version "7.1.2"
+    id "com.github.johnrengelman.shadow" version "8.0.0"
 }
 
 architectury {
     platformSetupLoomIde()
     forge()
 }
+
+def jarFileName = 'letsdo-nethervinery-forge'
+
+archivesBaseName = jarFileName
+
+
 
 loom {
     accessWidenerPath = project(":common").loom.accessWidenerPath
@@ -43,21 +49,21 @@ processResources {
 }
 
 shadowJar {
-    exclude "fabric.mod.json"
     exclude "architectury.common.json"
 
     configurations = [project.configurations.shadowCommon]
-    classifier "dev-shadow"
+    archiveClassifier.set("dev-shadow")
 }
 
 remapJar {
+    injectAccessWidener = true
     input.set shadowJar.archiveFile
     dependsOn shadowJar
-    classifier null
+    archiveClassifier.set(null)
 }
 
 jar {
-    classifier "dev"
+    archiveClassifier.set("dev")
 }
 
 sourcesJar {
