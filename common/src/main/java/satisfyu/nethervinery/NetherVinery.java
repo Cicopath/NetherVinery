@@ -5,6 +5,7 @@ import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import satisfyu.nethervinery.event.CommonEvents;
 import satisfyu.nethervinery.registry.*;
 
 public class NetherVinery {
@@ -18,6 +19,7 @@ public class NetherVinery {
         NetherGrapeTypes.addGrapeAttributes();
         NetherEffects.init();
         NetherScreenHandlerTypes.init();
+        CommonEvents.init();
     }
 
     public static void commonSetup(){
