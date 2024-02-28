@@ -4,7 +4,7 @@ import dev.architectury.event.events.common.LootEvent;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.storage.loot.LootDataManager;
 import org.jetbrains.annotations.Nullable;
-import satisfy.bakery.util.LoottableInjector;
+import satisfyu.nethervinery.util.LoottableInjector;
 
 public class CommonEvents {
 

@@ -1,4 +1,4 @@
-package satisfy.bakery.util;
+package satisfyu.nethervinery.util;
 
 import dev.architectury.event.events.common.LootEvent;
 import net.minecraft.resources.ResourceLocation;
