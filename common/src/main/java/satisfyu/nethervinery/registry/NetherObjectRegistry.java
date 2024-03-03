@@ -27,6 +27,7 @@ import satisfyu.nethervinery.block.grape.CrimsonGrapeBush;
 import satisfyu.nethervinery.block.grape.WarpedGrapeBush;
 import satisfyu.vinery.block.GrapeItem;
 import satisfyu.vinery.block.GrapevinePotBlock;
+import satisfyu.vinery.block.stem.LatticeBlock;
 import satisfyu.vinery.block.storage.BigBottleStorageBlock;
 import satisfyu.vinery.block.storage.FourBottleStorageBlock;
 import satisfyu.vinery.block.storage.NineBottleStorageBlock;
@@ -95,6 +96,8 @@ public class NetherObjectRegistry {
     public static final RegistrySupplier<Block> REINFORCED_WARPED_PLANKS = registerWithItem("reinforced_warped_planks", () -> new Block(BlockBehaviour.Properties.copy(Blocks.CRIMSON_PLANKS)));
     public static final RegistrySupplier<Block> CRESTED_WARPED_PLANKS = registerWithItem("crested_warped_planks", () -> new Block(BlockBehaviour.Properties.copy(Blocks.CRIMSON_PLANKS)));
     public static final RegistrySupplier<Block> WARPED_BARREL = registerWithItem("warped_barrel", () -> new BarrelBlock(BlockBehaviour.Properties.copy(Blocks.BARREL)));
+    public static final RegistrySupplier<Block> WARPED_LATTICE = registerWithItem("warped_lattice", () -> new LatticeBlock(BlockBehaviour.Properties.of().strength(2.0F, 3.0F).sound(Blocks.JUNGLE_PLANKS.getSoundType(Blocks.JUNGLE_PLANKS.defaultBlockState())).noOcclusion()));
+    public static final RegistrySupplier<Block> CRIMSON_LATTICE = registerWithItem("crimson_lattice", () -> new LatticeBlock(BlockBehaviour.Properties.of().strength(2.0F, 3.0F).sound(Blocks.MANGROVE_PLANKS.getSoundType(Blocks.MANGROVE_PLANKS.defaultBlockState())).noOcclusion()));
 
 
     private static <T extends Item> RegistrySupplier<T> registerI(String path, Supplier<T> item) {

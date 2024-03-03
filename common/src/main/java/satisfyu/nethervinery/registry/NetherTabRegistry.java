@@ -51,6 +51,8 @@ public class NetherTabRegistry {
                 out.accept(NetherObjectRegistry.REINFORCED_WARPED_PLANKS.get());
                 out.accept(NetherObjectRegistry.CRESTED_WARPED_PLANKS.get());
                 out.accept(NetherObjectRegistry.WARPED_BARREL.get());
+                out.accept(NetherObjectRegistry.WARPED_LATTICE.get());
+                out.accept(NetherObjectRegistry.CRIMSON_LATTICE.get());
 
             })
             .build());

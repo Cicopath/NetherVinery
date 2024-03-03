@@ -22,7 +22,7 @@ public class NetherVineryClient {
                 NetherObjectRegistry.IMPROVED_LAVA_FIZZ.get(), NetherObjectRegistry.LAVA_FIZZ.get(), NetherObjectRegistry.IMPROVED_LAVA_FIZZ.get(),
                 NetherObjectRegistry.NETHERITE_NECTAR.get(), NetherObjectRegistry.CRIMSON_WINE_RACK_MID.get(), NetherObjectRegistry.WARPED_GRAPE_BUSH.get(),
                 NetherObjectRegistry.WARPED_WINE_RACK_MID.get(), NetherObjectRegistry.CRIMSON_GRAPE_BUSH.get(), NetherObjectRegistry.IMPROVED_NETHER_FIZZ.get(),
-                NetherObjectRegistry.OBSIDIAN_STEM.get()
+                NetherObjectRegistry.OBSIDIAN_STEM.get(), NetherObjectRegistry.WARPED_LATTICE.get(), NetherObjectRegistry.CRIMSON_LATTICE.get()
                 );
 
         ColorHandlerRegistry.registerBlockColors((state, world, pos, tintIndex)->{

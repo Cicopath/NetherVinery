@@ -3,7 +3,7 @@
 	"textures": {
 		"0": "nethervinery:block/bag_bottom",
 		"1": "nethervinery:block/crimson_crate_top",
-		"2": "nethervinery:block/bag_side_handle",
+		"2": "nethervinery:block/bag_side_knot",
 		"3": "nethervinery:block/bag_side",
 		"particle": "nethervinery:block/bag_bottom"
 	},
