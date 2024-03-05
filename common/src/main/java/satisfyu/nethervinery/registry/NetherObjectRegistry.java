@@ -59,8 +59,8 @@ public class NetherObjectRegistry {
     public static final RegistrySupplier<Item> CRIMSON_GRAPE = registerI("crimson_grape", () -> new GrapeItem(getSettings().food(Foods.SWEET_BERRIES), NetherGrapeTypes.CRIMSON, CRIMSON_GRAPE_SEEDS.get()));
     public static final RegistrySupplier<Item> WARPED_GRAPE_SEEDS = registerI("warped_grape_seeds", () -> new GrapeBushSeedItem(WARPED_GRAPE_BUSH.get(), getSettings(), NetherGrapeTypes.WARPED));
     public static final RegistrySupplier<Item> WARPED_GRAPE = registerI("warped_grape", () -> new GrapeItem(getSettings().food(Foods.SWEET_BERRIES), NetherGrapeTypes.WARPED, WARPED_GRAPE_SEEDS.get()));
-    public static final RegistrySupplier<Block> WARPED_GRAPE_CRATE = registerWithItem("warped_grape_crate", () -> new FacingBlock(BlockBehaviour.Properties.copy(Blocks.HAY_BLOCK)));
-    public static final RegistrySupplier<Block> CRIMSON_GRAPE_GRATE = registerWithItem("crimson_grape_crate", () -> new FacingBlock(BlockBehaviour.Properties.copy(Blocks.HAY_BLOCK)));
+    public static final RegistrySupplier<Block> WARPED_GRAPE_CRATE = registerWithItem("warped_grape_crate", () -> new FacingBlock(BlockBehaviour.Properties.copy(Blocks.RED_WOOL)));
+    public static final RegistrySupplier<Block> CRIMSON_GRAPE_GRATE = registerWithItem("crimson_grape_crate", () -> new FacingBlock(BlockBehaviour.Properties.copy(Blocks.RED_WOOL)));
     public static final RegistrySupplier<Item> WARPED_GRAPEJUICE = registerI("warped_grapejuice", () -> new Item(getSettings()));
     public static final RegistrySupplier<Item> CRIMSON_GRAPEJUICE = registerI("crimson_grapejuice", () -> new Item(getSettings()));
     public static final RegistrySupplier<Block> GHASTLY_GRENACHE = registerB("ghastly_grenache", () -> new WineBottleBlock(getWineSettings(), 2));
