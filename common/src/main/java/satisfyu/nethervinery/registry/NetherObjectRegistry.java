@@ -22,12 +22,12 @@ import satisfyu.nethervinery.NetherVineryIdentifier;
 import satisfyu.nethervinery.block.AgingBarrelBlock;
 import satisfyu.nethervinery.block.ApplePressBlock;
 import satisfyu.nethervinery.block.ImprovedWineBottleBlock;
-import satisfyu.nethervinery.block.ObsidianPaleStemBlock;
 import satisfyu.nethervinery.block.grape.CrimsonGrapeBush;
 import satisfyu.nethervinery.block.grape.WarpedGrapeBush;
 import satisfyu.vinery.block.GrapeItem;
 import satisfyu.vinery.block.GrapevinePotBlock;
 import satisfyu.vinery.block.stem.LatticeBlock;
+import satisfyu.vinery.block.stem.PaleStemBlock;
 import satisfyu.vinery.block.storage.BigBottleStorageBlock;
 import satisfyu.vinery.block.storage.FourBottleStorageBlock;
 import satisfyu.vinery.block.storage.NineBottleStorageBlock;
@@ -50,7 +50,7 @@ public class NetherObjectRegistry {
     public static final Registrar<Block> BLOCK_REGISTRAR = BLOCKS.getRegistrar();
 
 
-    public static final RegistrySupplier<Block> OBSIDIAN_STEM = registerWithItem("obsidian_stem", () -> new ObsidianPaleStemBlock(BlockBehaviour.Properties.copy(Blocks.OBSIDIAN)));
+    public static final RegistrySupplier<Block> OBSIDIAN_STEM = registerWithItem("obsidian_stem", () -> new PaleStemBlock(getGrapevineSettings()));
     public static final RegistrySupplier<Item> CRIMSON_NETHER_BAG = registerI("crimson_nether_bag", () -> new BundleItem(getSettings().stacksTo(1)));
     public static final RegistrySupplier<Item> WARPED_NETHER_BAG = registerI("warped_nether_bag", () -> new BundleItem(getSettings().stacksTo(1)));
     public static final RegistrySupplier<Block> CRIMSON_GRAPE_BUSH = registerB("crimson_grape_bush", () -> new CrimsonGrapeBush(getBushSettings(), NetherGrapeTypes.CRIMSON));
@@ -124,6 +124,10 @@ public class NetherObjectRegistry {
     private static Item.Properties getSettings() {
         return getSettings(settings -> {
         });
+    }
+
+    private static BlockBehaviour.Properties getGrapevineSettings() {
+        return BlockBehaviour.Properties.of().strength(3.0F).randomTicks().sound(SoundType.STONE).noOcclusion();
     }
 
     private static Item.Properties getWineItemSettings(MobEffect effect, int duration) {
