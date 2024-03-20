@@ -1,7 +1,6 @@
 modLoader = "javafml"
 loaderVersion = "[43,)"
-#issueTrackerURL = ""
-license = "Insert License Here"
+license = "Custom"
 
 [[mods]]
 modId = "nethervinery"
@@ -12,7 +11,7 @@ icon = "pack.png"
 description = '''
 Welcome to Nether Vinery! New grapes, new decor - all in the style of the Nether.
 '''
-#logoFile = ""
+#logoFile = "pack.png"
 
 [[dependencies.nethervinery]]
 modId = "forge"
@@ -45,6 +44,6 @@ side = "BOTH"
 [[dependencies.nethervinery]]
 modId = "doapi"
 mandatory = true
-versionRange = "[1.2.8,)"
+versionRange = "[1.2.9,)"
 ordering = "AFTER"
 side = "BOTH"

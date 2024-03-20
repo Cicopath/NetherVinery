@@ -2,15 +2,16 @@
   "schemaVersion": 1,
   "id": "nethervinery",
   "version": "${version}",
-  "name": "Nether Vinery",
+  "name": "NetherVinery",
   "description": "Welcome to Nether Vinery! New grapes, new decor - all in the style of the Nether.",
   "authors": [
     "satisfyu, baumeisterjo"
   ],
   "contact": {
-    "sources": "https://github.com/satisfyu/NetherVinery"
+    "sources": "https://github.com/satisfyu/NetherVinery",
+    "homepage": "https://legacy.curseforge.com/minecraft/mc-mods/lets-do-nethervinery"
   },
-  "license": "ARR",
+  "license": "Custom",
   "icon": "pack.png",
   "environment": "*",
   "entrypoints": {
