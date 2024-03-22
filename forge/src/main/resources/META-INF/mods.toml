@@ -5,7 +5,7 @@ license = "Custom"
 [[mods]]
 modId = "nethervinery"
 version = "${version}"
-displayName = "Nether Vinery"
+displayName = "[Let's Do] NetherVinery"
 authors = "satisfyu"
 icon = "pack.png"
 description = '''
