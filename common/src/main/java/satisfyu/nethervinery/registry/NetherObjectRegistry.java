@@ -24,7 +24,7 @@ import satisfyu.nethervinery.block.ApplePressBlock;
 import satisfyu.nethervinery.block.ImprovedWineBottleBlock;
 import satisfyu.nethervinery.block.grape.CrimsonGrapeBush;
 import satisfyu.nethervinery.block.grape.WarpedGrapeBush;
-import satisfyu.vinery.item.GrapeItem;
+import satisfyu.vinery.block.GrapeItem;
 import satisfyu.vinery.block.GrapevinePotBlock;
 import satisfyu.vinery.block.stem.LatticeBlock;
 import satisfyu.vinery.block.stem.PaleStemBlock;
@@ -42,7 +42,7 @@ import java.util.List;
 import java.util.function.Consumer;
 import java.util.function.Supplier;
 
-
+@SuppressWarnings("unused")
 public class NetherObjectRegistry {
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(NetherVinery.MODID, Registries.ITEM);
     public static final Registrar<Item> ITEM_REGISTRAR = ITEMS.getRegistrar();
