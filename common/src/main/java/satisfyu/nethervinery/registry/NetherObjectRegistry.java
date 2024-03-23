@@ -24,7 +24,7 @@ import satisfyu.nethervinery.block.ApplePressBlock;
 import satisfyu.nethervinery.block.ImprovedWineBottleBlock;
 import satisfyu.nethervinery.block.grape.CrimsonGrapeBush;
 import satisfyu.nethervinery.block.grape.WarpedGrapeBush;
-import satisfyu.vinery.block.GrapeItem;
+import satisfyu.vinery.item.GrapeItem;
 import satisfyu.vinery.block.GrapevinePotBlock;
 import satisfyu.vinery.block.stem.LatticeBlock;
 import satisfyu.vinery.block.stem.PaleStemBlock;
