@@ -15,6 +15,6 @@ public class NetherStorageTypes extends StorageTypeRegistry {
         blocks.add(NetherObjectRegistry.WARPED_WINE_RACK_BIG.get());
         blocks.add(NetherObjectRegistry.WARPED_WINE_RACK_MID.get());
         blocks.add(NetherObjectRegistry.WARPED_WINE_RACK_SMALL.get());
-        blocks.addAll(List.of((Block) NetherObjectRegistry.GHASTLY_GRENACHE.get(), (Block)NetherObjectRegistry.NETHERITE_NECTAR.get(), (Block)NetherObjectRegistry.BLAZEWINE_PINOT.get(), (Block)NetherObjectRegistry.LAVA_FIZZ.get(), (Block)NetherObjectRegistry.NETHER_FIZZ.get(), (Block)NetherObjectRegistry.IMPROVED_NETHER_FIZZ.get(), (Block)NetherObjectRegistry.IMPROVED_LAVA_FIZZ.get()));
+        blocks.addAll(List.of(NetherObjectRegistry.GHASTLY_GRENACHE.get(), NetherObjectRegistry.NETHERITE_NECTAR.get(), NetherObjectRegistry.BLAZEWINE_PINOT.get(), NetherObjectRegistry.LAVA_FIZZ.get(), NetherObjectRegistry.NETHER_FIZZ.get(), NetherObjectRegistry.IMPROVED_NETHER_FIZZ.get(), NetherObjectRegistry.IMPROVED_LAVA_FIZZ.get()));
     }
 }
