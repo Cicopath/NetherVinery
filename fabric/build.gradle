@@ -38,7 +38,7 @@ dependencies {
     modImplementation("me.shedaniel:RoughlyEnoughItems-fabric:$rei_version") { exclude group: 'net.fabricmc', module: 'fabric-loader' }
     modImplementation "com.terraformersmc.terraform-api:terraform-wood-api-v1:${rootProject.terraform_wood_api_version}"
     modImplementation "maven.modrinth:do-api:${project.doapi_version}-fabric"
-    modImplementation "maven.modrinth:vinery:${project.vinery_version}-fabric"
+    modImplementation "maven.modrinth:lets-do-vinery:${project.vinery_version}-fabric"
     modApi( "net.fabricmc.fabric-api:fabric-api:${rootProject.fabric_api_version}") { exclude group: 'net.fabricmc', module: 'fabric-loader' }
     modApi( "dev.architectury:architectury-fabric:${rootProject.architectury_version}") { exclude group: 'net.fabricmc', module: 'fabric-loader' }
     common(project(path: ":common", configuration: "namedElements")) { transitive false }

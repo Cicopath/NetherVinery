@@ -33,7 +33,7 @@ configurations {
 dependencies {
     forge "net.minecraftforge:forge:${rootProject.forge_version}"
     modImplementation "maven.modrinth:do-api:${project.doapi_version}-forge"
-    modImplementation "maven.modrinth:vinery:${project.vinery_version}-forge"
+    modImplementation "maven.modrinth:lets-do-vinery:${project.vinery_version}-forge"
     modImplementation "me.shedaniel:RoughlyEnoughItems-forge:$rei_version"
     modApi "dev.architectury:architectury-forge:${rootProject.architectury_version}"
     common(project(path: ":common", configuration: "namedElements")) { transitive false }
