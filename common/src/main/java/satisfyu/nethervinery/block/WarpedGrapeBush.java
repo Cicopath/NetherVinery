@@ -1,4 +1,4 @@
-package satisfyu.nethervinery.block.grape;
+package satisfyu.nethervinery.block;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.level.BlockGetter;

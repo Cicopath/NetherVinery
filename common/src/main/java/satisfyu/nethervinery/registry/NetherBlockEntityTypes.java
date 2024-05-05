@@ -5,7 +5,7 @@ import dev.architectury.registry.registries.Registrar;
 import dev.architectury.registry.registries.RegistrySupplier;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.level.block.entity.BlockEntityType;
-import satisfyu.nethervinery.NetherVineryIdentifier;
+import satisfyu.nethervinery.util.NetherVineryIdentifier;
 import satisfyu.nethervinery.block.entity.AgingBarrelBlockEntity;
 import satisfyu.nethervinery.block.entity.ApplePressBlockEntity;
 import satisfyu.vinery.Vinery;

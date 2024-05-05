@@ -34,14 +34,11 @@ public class AgingBarrelGuiHandler extends AbstractRecipeBookGUIScreenHandler {
     }
 
     private void buildBlockEntityContainer(Inventory playerInventory, Container inventory) {
-        // Wine input
         this.addSlot(new ExtendedSlot(inventory, 0, 79, 51, stack -> stack.is(ObjectRegistry.WINE_BOTTLE.get())));
-        // Inputs
         this.addSlot(new ExtendedSlot(inventory, 1, 33, 26, this::isIngredient));
         this.addSlot(new ExtendedSlot(inventory, 2, 51, 26, this::isIngredient));
         this.addSlot(new ExtendedSlot(inventory, 3, 33, 44, this::isIngredient));
         this.addSlot(new ExtendedSlot(inventory, 4, 51, 44, this::isIngredient));
-        // Output
         this.addSlot(new StoveOutputSlot(playerInventory.player, inventory, 5, 128,  35));
     }
 

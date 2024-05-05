@@ -1,11 +1,14 @@
 package satisfyu.nethervinery.effect;
 
+import net.minecraft.core.BlockPos;
+import net.minecraft.resources.ResourceKey;
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.util.Mth;
 import net.minecraft.world.effect.InstantenousMobEffect;
 import net.minecraft.world.effect.MobEffectCategory;
 import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.phys.Vec3;
+import net.minecraft.world.level.Level;
 
 public class GravediggerEffect extends InstantenousMobEffect {
 
@@ -15,15 +18,15 @@ public class GravediggerEffect extends InstantenousMobEffect {
 
     @Override
     public void applyEffectTick(LivingEntity livingEntity, int amplifier) {
-        if (!livingEntity.level().isClientSide()){
-            if (livingEntity instanceof ServerPlayer serverPlayer && !livingEntity.isSpectator()) {
-                if (serverPlayer.getLastDeathLocation().isPresent()) {
-                    if (serverPlayer.level().dimension() == serverPlayer.getLastDeathLocation().get().dimension()) {
-                        Vec3 pos = Vec3.atBottomCenterOf(serverPlayer.getLastDeathLocation().get().pos());
-                        serverPlayer.connection.teleport(pos.x, pos.y, pos.z, Mth.wrapDegrees(serverPlayer.getYRot()), Mth.wrapDegrees(serverPlayer.getXRot()));
-                    }
+        if (!livingEntity.level().isClientSide() && livingEntity instanceof ServerPlayer serverPlayer) {
+            serverPlayer.getLastDeathLocation().ifPresent(deathLocation -> {
+                ResourceKey<Level> deathDimension = deathLocation.dimension();
+                ServerLevel targetLevel = serverPlayer.server.getLevel(deathDimension);
+                if (targetLevel != null && serverPlayer.level().dimension() != deathDimension) {
+                    BlockPos pos = deathLocation.pos();
+                    serverPlayer.teleportTo(targetLevel, pos.getX(), pos.getY(), pos.getZ(), Mth.wrapDegrees(serverPlayer.getYRot()), Mth.wrapDegrees(serverPlayer.getXRot()));
                 }
-            }
+            });
         }
     }
 

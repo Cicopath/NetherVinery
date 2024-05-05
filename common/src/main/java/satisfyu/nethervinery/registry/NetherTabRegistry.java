@@ -8,6 +8,7 @@ import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
 import satisfyu.nethervinery.NetherVinery;
 
+@SuppressWarnings("unused")
 public class NetherTabRegistry {
     public static final DeferredRegister<CreativeModeTab> NETHERVINERY_TABS = DeferredRegister.create(NetherVinery.MODID, Registries.CREATIVE_MODE_TAB);
 

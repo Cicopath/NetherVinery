@@ -9,7 +9,7 @@ import net.minecraft.client.renderer.GameRenderer;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.player.Inventory;
-import satisfyu.nethervinery.NetherVineryIdentifier;
+import satisfyu.nethervinery.util.NetherVineryIdentifier;
 import satisfyu.nethervinery.client.gui.handler.ApplePressGuiHandler;
 
 

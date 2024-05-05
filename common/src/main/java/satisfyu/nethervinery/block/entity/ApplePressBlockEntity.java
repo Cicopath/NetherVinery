@@ -1,5 +1,6 @@
 package satisfyu.nethervinery.block.entity;
 
+import de.cristelknight.doapi.common.world.ImplementedInventory;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.NonNullList;
 import net.minecraft.nbt.CompoundTag;

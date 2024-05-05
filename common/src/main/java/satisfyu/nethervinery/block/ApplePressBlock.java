@@ -1,16 +1,12 @@
 package satisfyu.nethervinery.block;
 
-import net.minecraft.ChatFormatting;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
-import net.minecraft.network.chat.Component;
 import net.minecraft.world.Containers;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.MenuProvider;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
@@ -27,13 +23,12 @@ import net.minecraft.world.phys.shapes.BooleanOp;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
+import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import satisfyu.nethervinery.block.entity.ApplePressBlockEntity;
 import satisfyu.nethervinery.registry.NetherBlockEntityTypes;
 
-import java.util.List;
-
-
+@SuppressWarnings("deprecation")
 public class ApplePressBlock extends BaseEntityBlock {
 
 	public static final DirectionProperty FACING = BlockStateProperties.HORIZONTAL_FACING;
@@ -56,7 +51,7 @@ public class ApplePressBlock extends BaseEntityBlock {
 	}
 
 	@Override
-	public InteractionResult use(BlockState state, Level world, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hit) {
+	public @NotNull InteractionResult use(BlockState state, Level world, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hit) {
 		if (!world.isClientSide) {
 			MenuProvider screenHandlerFactory = state.getMenuProvider(world, pos);
 			if (screenHandlerFactory != null) {
@@ -83,7 +78,7 @@ public class ApplePressBlock extends BaseEntityBlock {
 	protected static final VoxelShape SHAPE_NS = makeShapeNS();
 
 	@Override
-	public VoxelShape getShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext context) {
+	public @NotNull VoxelShape getShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext context) {
 		return state.getValue(FACING) == Direction.SOUTH || state.getValue(FACING) == Direction.NORTH ? SHAPE_WE : SHAPE_NS;
 	}
 
@@ -132,7 +127,7 @@ public class ApplePressBlock extends BaseEntityBlock {
 	}
 
 	@Override
-	public RenderShape getRenderShape(BlockState state) {
+	public @NotNull RenderShape getRenderShape(BlockState state) {
 		return RenderShape.MODEL;
 	}
 
@@ -147,16 +142,11 @@ public class ApplePressBlock extends BaseEntityBlock {
 		builder.add(FACING);
 	}
 
-	public BlockState rotate(BlockState state, Rotation rotation) {
+	public @NotNull BlockState rotate(BlockState state, Rotation rotation) {
 		return state.setValue(FACING, rotation.rotate(state.getValue(FACING)));
 	}
 
-	public BlockState mirror(BlockState state, Mirror mirror) {
+	public @NotNull BlockState mirror(BlockState state, Mirror mirror) {
 		return state.rotate(mirror.getRotation(state.getValue(FACING)));
-	}
-
-	@Override
-	public void appendHoverText(ItemStack itemStack, BlockGetter world, List<Component> tooltip, TooltipFlag tooltipContext) {
-		tooltip.add(Component.translatable("block.vinery.press.tooltip").withStyle(ChatFormatting.ITALIC, ChatFormatting.GRAY));
 	}
 }

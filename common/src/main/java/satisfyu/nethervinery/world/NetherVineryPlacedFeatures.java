@@ -1,10 +1,9 @@
 package satisfyu.nethervinery.world;
 
-import net.minecraft.core.Registry;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.level.levelgen.placement.PlacedFeature;
-import satisfyu.nethervinery.NetherVineryIdentifier;
+import satisfyu.nethervinery.util.NetherVineryIdentifier;
 
 public class NetherVineryPlacedFeatures {
 

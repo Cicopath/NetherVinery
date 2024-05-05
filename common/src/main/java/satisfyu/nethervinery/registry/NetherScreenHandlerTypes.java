@@ -3,13 +3,12 @@ package satisfyu.nethervinery.registry;
 import dev.architectury.registry.registries.DeferredRegister;
 import dev.architectury.registry.registries.Registrar;
 import dev.architectury.registry.registries.RegistrySupplier;
-import net.minecraft.core.Registry;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.flag.FeatureFlags;
 import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.inventory.MenuType;
 import satisfyu.nethervinery.NetherVinery;
-import satisfyu.nethervinery.NetherVineryIdentifier;
+import satisfyu.nethervinery.util.NetherVineryIdentifier;
 import satisfyu.nethervinery.client.gui.handler.ApplePressGuiHandler;
 import satisfyu.nethervinery.client.gui.handler.AgingBarrelGuiHandler;
 

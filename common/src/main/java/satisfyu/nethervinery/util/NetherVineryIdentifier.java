@@ -1,6 +1,7 @@
-package satisfyu.nethervinery;
+package satisfyu.nethervinery.util;
 
 import net.minecraft.resources.ResourceLocation;
+import satisfyu.nethervinery.NetherVinery;
 
 public class NetherVineryIdentifier extends ResourceLocation {
 
