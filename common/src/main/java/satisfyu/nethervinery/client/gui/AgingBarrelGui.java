@@ -8,8 +8,8 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.player.Inventory;
 import satisfyu.nethervinery.client.gui.handler.AgingBarrelGuiHandler;
-import satisfyu.vinery.VineryIdentifier;
 import satisfyu.vinery.client.recipebook.FermentationPotRecipeBook;
+import satisfyu.vinery.util.VineryIdentifier;
 
 @Environment(EnvType.CLIENT)
 public class AgingBarrelGui extends AbstractRecipeBookGUIScreen<AgingBarrelGuiHandler> {

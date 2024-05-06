@@ -7,7 +7,6 @@ import java.util.List;
 import java.util.Set;
 
 public class NetherStorageTypes extends StorageTypeRegistry {
-
     public static void registerBlocks(Set<Block> blocks) {
         blocks.add(NetherObjectRegistry.CRIMSON_WINE_RACK_BIG.get());
         blocks.add(NetherObjectRegistry.CRIMSON_WINE_RACK_SMALL.get());
