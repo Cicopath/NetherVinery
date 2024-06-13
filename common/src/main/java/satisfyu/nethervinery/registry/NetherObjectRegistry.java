@@ -66,7 +66,7 @@ public class NetherObjectRegistry {
     public static final RegistrySupplier<Block> GHASTLY_GRENACHE = registerB("ghastly_grenache", () -> new WineBottleBlock(getWineSettings(), 2));
     public static final RegistrySupplier<Item>  GHASTLY_GRENACHE_ITEM = registerI("ghastly_grenache", () -> new DrinkBlockBigItem(GHASTLY_GRENACHE.get(), getWineItemSettings(MobEffectRegistry.IMPROVED_JUMP_BOOST.get(), 1200)));
     public static final RegistrySupplier<Block> NETHERITE_NECTAR = registerB("netherite_nectar", () -> new WineBottleBlock(getWineSettings(), 3));
-    public static final RegistrySupplier<Item>  NETHERITE_NECTAR_ITEM = registerI("netherite_nectar", () -> new DrinkBlockSmallItem(NETHERITE_NECTAR.get(), getWineItemSettings(NetherEffects.NETHERITE.get(), 2400)));
+    public static final RegistrySupplier<Item>  NETHERITE_NECTAR_ITEM = registerI("netherite_nectar", () -> new DrinkBlockSmallItem(NETHERITE_NECTAR.get(), getWineItemSettings(NetherEffects.NETHERITE.get(), 240)));
     public static final RegistrySupplier<Block> BLAZEWINE_PINOT = registerB("blazewine_pinot", () -> new WineBottleBlock(getWineSettings(), 1));
     public static final RegistrySupplier<Item>  BLAZEWINE_PINOT_ITEM = registerI("blazewine_pinot", () -> new DrinkBlockBigItem(BLAZEWINE_PINOT.get(), getWineItemSettings(MobEffectRegistry.LAVA_WALKER.get(), 1200)));
     public static final RegistrySupplier<Block> NETHER_FIZZ = registerB("nether_fizz", () -> new WineBottleBlock(getWineSettings(), 2));
@@ -77,7 +77,6 @@ public class NetherObjectRegistry {
     public static final RegistrySupplier<Item>  IMPROVED_NETHER_FIZZ_ITEM = registerI("improved_nether_fizz", () -> new DrinkBlockSmallItem(IMPROVED_NETHER_FIZZ.get(), getWineItemSettings(NetherEffects.IMPROVED_HEARTHSTONE.get(), 1)));
     public static final RegistrySupplier<Block> IMPROVED_LAVA_FIZZ = registerB("improved_lava_fizz", () -> new ImprovedWineBottleBlock(getWineSettings(), 3));
     public static final RegistrySupplier<Item>  IMPROVED_LAVA_FIZZ_ITEM = registerI("improved_lava_fizz", () -> new DrinkBlockSmallItem(IMPROVED_LAVA_FIZZ.get(), getWineItemSettings(NetherEffects.IMPROVED_GRAVEDIGGER.get(), 1)));
-
     public static final RegistrySupplier<Block> CRIMSON_FERMENTATION_BARREL = registerWithItem("crimson_fermentation_barrel", () -> new AgingBarrelBlock(BlockBehaviour.Properties.copy(Blocks.BARREL).noOcclusion()));
     public static final RegistrySupplier<Block> CRIMSON_GRAPEVINE_POT = registerWithItem("crimson_grapevine_pot", () -> new GrapevinePotBlock(BlockBehaviour.Properties.copy(Blocks.CRIMSON_PLANKS).noOcclusion()));
     public static final RegistrySupplier<Block> CRIMSON_APPLE_PRESS = registerWithItem("crimson_apple_press", () -> new ApplePressBlock(BlockBehaviour.Properties.copy(Blocks.CRIMSON_PLANKS).noOcclusion()));
